@@ -473,6 +473,7 @@ $select_8_prod= mysqli_query($conn, $query);
 				</div>
 				
 			</div><!--/.scroll-Top-->
+		</footer><!--/.footer-->
 
 <script>
 

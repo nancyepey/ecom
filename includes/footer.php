@@ -1,5 +1,5 @@
 
-</footer><!--/.footer-->
+
 		<!--footer end-->
 		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
