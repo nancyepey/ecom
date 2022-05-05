@@ -7,7 +7,8 @@ include "../db.php";
 include "../functions.php";
 
 ?>
-
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="ckfinder/ckfinder.js"></script>
 
 <?php
 
@@ -23,7 +24,7 @@ if(isset($_POST['add_post'])) {
     $post_author = escape($_POST['post_author']);
 
     //getting the post content
-    $post_content = escape($_POST['editor1']);
+    $post_content = escape($_POST['body']);
 
 
 
@@ -164,7 +165,7 @@ if(isset($_POST['add_post'])) {
 	            </div>
 	            <div class="form-group">
 	              <label for="body">Post Content</label>
-	              <textarea name="editor1" id="body" class="form-control" required></textarea>
+	              <textarea name="body" id="body" class="form-control" required></textarea>
 	            </div>
 
           		<button class="btn btn-primary" type="submit" name="add_post" >Published Post</button>
@@ -175,5 +176,13 @@ if(isset($_POST['add_post'])) {
 		</div>
 	</div>
 </div>
+
+<script>
+ var editor = CKEDITOR.replace( 'body', {
+  height: 300,
+//   filebrowserUploadUrl: "upload.php"
+ });
+ CKFinder.setupCKEditor(editor);
+</script>
 
 <?php include "../includes/footer.php"; ?>
